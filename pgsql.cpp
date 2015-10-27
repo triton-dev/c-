@@ -1,5 +1,6 @@
 #include<iostream>
 #include<pqxx/pqxx>
+#include<string>
 
 using namespace std;
 using namespace pqxx;
@@ -23,10 +24,21 @@ int main(int argc, char* argv[]) {
 
 // Execute query
 	result R(N.exec(sql));
+    string s[5];
+    char ph;
+    int wide;
+    wide=20;
+    ph = ' ';
 
 // Show result
 	for (result::const_iterator i = R.begin(); i != R.end(); ++i) {
-			cout << i[0].as<string>() << "\t" << i[1].as<string>() << "\t" << i[2].as<string>() << "\t" << i[3].as<string>() << "\t" << i[4].as<string>() << endl;
+            for (int j=0; j<5;  j++) {
+               s[j] = i[j].as<string>() ;
+               s[j].insert(s[j].begin(), wide-s[j].length(), ph);
+               cout << s[j] << "\t";
+            }
+            cout << endl;
+//			cout << i[0].as<string>() << "\t" << i[1].as<string>() << "\t" << i[2].as<string>() << "\t" << i[3].as<string>() << "\t" << i[4].as<string>() << endl;
 	}
 
 // Disconnet
