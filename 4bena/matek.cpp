@@ -17,12 +17,24 @@ int main () {
 
 
 // másodfokú megoldáshoz
-    double *r;
+
+	double a,b,c;
+	cout << "===============================================\n";
+	cout << "| 0-ra rendezett másodfokú egyenlet megoldása |\n";
+	cout << "===============================================\n";
+	cout << "Kérem az x^2 együtthatóját: ";
+	cin >> a;
+	cout << "Kérem x együthatóját: ";
+	cin >> b;
+	cout << "Kérem a konstanst: ";
+	cin >> c;
+	
+	masodfoku(a,b,c);
     
-    r = masodfoku(-1,5,-4);
-    
-    cout << *r << endl;
-    cout << *(r+1) << endl; 
-    cout << *(r+2) << endl;
+   
+   
+   
+   
+// main() visszatérés   
 	return 0;
 }

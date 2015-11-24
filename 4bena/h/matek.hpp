@@ -3,7 +3,9 @@
 #define _MATEK_
 
 #include <cmath>
+#include <iostream>
 
+using namespace std;
 
 const double PI = 3.1415927;
 
@@ -100,27 +102,41 @@ double k_rombusz (double a) {
 }
 
 // másodfokú egyenlet megoldása
-double * masodfoku(double a, double b, double c) {
-    double res[3];
-    res[0], res[1], res[2] = 0;
-    double d = b*b-4*a*c;
-    if (d < 0) {
-        res[0] = 0;
-        return res;
+void masodfoku(double a, double b, double c) {
+	cout << "--------------------------------------------------\n";
+	struct X12 {
+		int r = 0;
+		double d = 0;
+		double x1 = 0;
+		double x2 = 0;
+	} x12;
+	
+    x12.d = (b*b)-(4*a*c);
+        
+    if (x12.d < 0) {
+        cout << "Nincs megoldás "<< a <<"x^2 + "<<b<<"x + "<<c<< "egyenltenek."<< endl;
     };
     
-    if (d == 0) {
-        res[0] = 1;
-        res[1] = -b/(2*a);
-        return res;
+    if (x12.d == 0) {
+        x12.r = 1;
+        x12.x1 = -b/(2*a);
+        x12.x2 = x12.x1;
+        
     }
     
-    if (d > 0) {
-        res[0] = 2;
-        res[1] = (-b)*(-sqrt(d))/(2*a);
-        res[2] = (-b)*(sqrt(d))/(2*a);
-        return res;
+    if (x12.d > 0) {
+        x12.r = 2;
+        x12.x1 = (-b-sqrt(x12.d))/(2*a);
+        x12.x2 = (-b+sqrt(x12.d))/(2*a);
+        ;
     }
+    cout.precision(12);
+    cout << a <<"x^2 + "<< b <<"x + " << c << " = 0" << endl;
+    cout << "Megoldások száma: " << x12.r << endl;
+    cout << "Diszkrimináns:    " << x12.d << endl;
+    cout << "x1 = "  << x12.x1 << endl;
+    cout << "x2 = "  << x12.x2 << endl;
+    cout << "--------------------------------------------------\n";
 }
 
 #endif
