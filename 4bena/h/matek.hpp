@@ -48,5 +48,52 @@ double k_haromszog(double a, double b, double c) {
 	return a + b + c;
 }
 
+// trapéz területe
+double t_trapez(double a, double c, double m) {
+	return ((a+c)/2)*m;
+}
+
+// trepéz kerülete
+double k_trapez(double a, double b, double c, double d) {
+	return a+b+c+d;
+}
+
+// paralelogramma területe
+double t_para (double a, double m) {
+	return a*m;
+}
+
+// paralelogramma kerülete
+double k_para (double a, double b) {
+	return 2*(a+b);
+}
+
+// deltoid területe
+double t_deltoid (double e, double f) {
+	return (e*f)/2;
+}
+
+// deltoid kerülete
+double k_deltoid (double a, double b) {
+	return 2*(a+b);
+}
+
+// rombusz területe
+double t_rombusz (double e, double f, int v=1) {
+	switch (v) {
+		case 1:
+			return (e*f)/2;
+			break;
+		case 0:
+		default:
+			return e*f;
+			break;		
+	}
+}
+
+// rombusz kerülete
+double k_rombusz (double a) {
+	return 4*a;
+}
 
 #endif
