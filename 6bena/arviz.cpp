@@ -24,18 +24,6 @@ void beolvas_darab() {
 		cin >> darab;
 	} while (darab < MIN_MERES || darab > MAX_MERES);
 	
-	if (darab == 0) {
-		darab = 9;
-		ertek[1] = 801;
-		ertek[2] = 750;
-		ertek[3] = 850;
-		ertek[4] = 910;
-		ertek[5] = 850;
-		ertek[6] = 900;
-		ertek[7] = 600;
-		ertek[8] = 810;
-		ertek[9] = 820;
-	}
 }
 
 void felsorol_meres() {
@@ -56,21 +44,35 @@ void felsorol_meres() {
 }
 
 void beolvas_meres(int db) {
-	cout << db << " mérési adat beolvasása következik..." << endl;
-	for(int i=1; i<=db; i++) {
-		do {
-			cout << i << ". adatot kérem: ";
-			cin >> ertek[i];
-		} while(ertek[i] < MIN_ERTEK || ertek[i] > MAX_ERTEK);
+	if (db == 0) {
+		darab = 9;
+		ertek[1] = 801;
+		ertek[2] = 750;
+		ertek[3] = 850;
+		ertek[4] = 910;
+		ertek[5] = 850;
+		ertek[6] = 900;
+		ertek[7] = 600;
+		ertek[8] = 810;
+		ertek[9] = 820;
+	}
+	else {
+		cout << db << " mérési adat beolvasása következik..." << endl;
+		for(int i=1; i<=db; i++) {
+			do {
+				cout << i << ". adatot kérem: ";
+				cin >> ertek[i];
+			} while(ertek[i] < MIN_ERTEK || ertek[i] > MAX_ERTEK);
+		}
 	}
 }
 
 int main() {
 	
 	beolvas_darab();
-	if (darab != 0) {
-		beolvas_meres(darab);
-	}
+	
+	beolvas_meres(darab);
+	
 	felsorol_meres();
 	
 	int arviz = 0;
@@ -78,7 +80,7 @@ int main() {
 	
 	for (int i=1; i<=darab; i++) {
 		if(ertek[i] > FOK_1 && nem_szakasz) {
-			arviz = arviz+1;
+			arviz++;
 			nem_szakasz = false;
 		}
 		if(ertek[i] <= FOK_1) {
