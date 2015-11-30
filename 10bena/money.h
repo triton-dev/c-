@@ -15,4 +15,8 @@ class Money {
     
     protected:
 };
+
+Money operator+(Money, Money);
+
+Money operator-(Money, Money);
 #endif

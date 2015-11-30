@@ -29,8 +29,19 @@ void Money::print() {
 Money operator+(Money m1, Money m2) {
     int e = m1.getEuro() + m2.getEuro();
     int c = m1.getCent() + m2.getCent();
-    e += e/100;
+    e += c/100;
     c %= 100;
+    Money res(e,c);
+    return res;
+};
+
+Money operator-(Money m1, Money m2) {
+    int e = m1.getEuro() - m2.getEuro();
+    int c = m1.getCent() - m2.getCent();
+    if (c < 0) {
+        e -= 1;
+        c = 100+c;
+    }
     Money res(e,c);
     return res;
 };

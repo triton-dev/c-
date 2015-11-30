@@ -10,11 +10,8 @@ int main() {
     
     p1.print();
     p2.print();
-    Money sum = Money(0,0);
-    sum.print();
-    
-    sum = (p1,p2);
-    sum.print();
+    (p1+p2).print();
+    (p1-p2).print();
 
 
 // int vége
