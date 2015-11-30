@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1448824337 source:/home/gyuri/c-/c-/9bena/CreditCard/Mny.cpp
+	<iostream>
+
+1448825868 source:/home/gyuri/c-/c-/9bena/CreditCard/src/CreditCard.cpp
+	"CreditCard.h"
+
+1448824831 /home/gyuri/c-/c-/9bena/CreditCard/include/CreditCard.h
+
+1448826354 source:/home/gyuri/c-/c-/9bena/CreditCard/src/Money.cpp
+	"Money.h"
+	<iostream>
+
+1448826147 /home/gyuri/c-/c-/9bena/CreditCard/include/Money.h
+
