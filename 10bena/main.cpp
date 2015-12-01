@@ -40,6 +40,7 @@ CreditCard::~CreditCard() {
 }
 
 void CreditCard::print() {
+    Money sum = Money(0,0);
     cout << "Tulajdonos: " << ownerName << endl;
     cout << "Kártyaszám: " << number << endl;
     cout << "Tranzakciók:" << endl;
@@ -47,9 +48,12 @@ void CreditCard::print() {
     while(tmp) {
         cout << "Tétel: " << tmp->itemName << "; Ár: ";
         tmp->price.print();
+        sum = (sum+tmp->price);
         tmp = tmp->next;
     }
     cout << "Tranzakciók vége." << endl;
+    cout << "Tranzakciók egyenlege: ";
+    sum.print();
 }
 
 void CreditCard::charge(string item, Money value) {
