@@ -54,7 +54,7 @@ int main()
 	dolg.at(2).setTeljesNev("Jankó Mankó");
 	cout << dolg.at(2).getTeljesNev() << endl;
 
-	for(int i=0; i < dolg.size(); i++) {
+	for(unsigned int i=0; i < dolg.size(); i++) {
 		dolg.at(i).print();
 	}
 
