@@ -62,6 +62,9 @@ void Dolgozo::print() {
 	cout << "| Felhasználó név_: " << felhnev << endl;
 	cout << "| Jog_____________: " << jog << endl;
 	cout << "| Aktív___________: " << b2s(aktiv) << endl;
+	cout << "+--------------------------------------" << endl;
+	cout << "| Jelszó__________: " << jelszo << endl;
+	//cout << "+--------------------------------------" << endl;
 	cout << "|" << endl;
 	cout << "|----- Felhasználó adatainak vége -----" << endl;
 	cout << "+--------------------------------------" << endl;

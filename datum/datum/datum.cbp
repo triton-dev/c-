@@ -2,38 +2,32 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="telcsi" />
+		<Option title="datum" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/telcsi" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/datum" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="/home/gyuri/c++/c-/datum/datum/" />
+					<Add directory="/home/gyuri/c++/c-/datum/datum/include" />
 				</Compiler>
 			</Target>
 		</Build>
 		<Compiler>
-			<Add option="-std=c++11" />
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="/home/gyuri/c++/c-/tel/telcsi/" />
-			<Add directory="include" />
 		</Compiler>
-		<Linker>
-			<Add option="-lcrypt" />
-		</Linker>
-		<Unit filename="include/Dolgozo.h" />
+		<Unit filename="include/Datum.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Dolgozo.cpp" />
+		<Unit filename="src/Datum.cpp" />
 		<Extensions>
 			<code_completion />
-			<envvars />
 			<debugger />
-			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

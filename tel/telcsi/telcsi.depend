@@ -1,14 +1,17 @@
 # depslib dependency file v1.0
-1449175408 source:/home/gyuri/c++/c-/tel/telcsi/main.cpp
+1449400146 source:/home/gyuri/c++/c-/tel/telcsi/main.cpp
 	<string>
 	<iostream>
 	<vector>
+	<fstream>
 	"Dolgozo.h"
+	<crypt.h>
+	<ctime>
 
-1449084443 /home/gyuri/c++/c-/tel/telcsi/include/Dolgozo.h
+1449237418 /home/gyuri/c++/c-/tel/telcsi/include/Dolgozo.h
 	<string>
 
-1449173018 source:/home/gyuri/c++/c-/tel/telcsi/src/Dolgozo.cpp
+1449237562 source:/home/gyuri/c++/c-/tel/telcsi/src/Dolgozo.cpp
 	<iostream>
 	<string>
 	"Dolgozo.h"

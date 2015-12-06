@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1449422297 source:/home/gyuri/c++/c-/datum/datum/main.cpp
+	<iostream>
+	<Datum.h>
+
+1449423585 /home/gyuri/c++/c-/datum/datum/include/Datum.h
+	<string>
+
+1449423605 source:/home/gyuri/c++/c-/datum/datum/src/Datum.cpp
+	<string>
+	"Datum.h"
+
