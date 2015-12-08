@@ -1,0 +1,20 @@
+Feladat:
+
+-Kérje be emberek adatait.
+  - emberek számát, 
+  - max. 10 személy,
+  - többet ne engedjen,
+  - személyek adatai:
+    - neve
+    - azonosító szám (int)
+    - átlagos havi fizetése (real)
+    - teljes munkaviszony időtartama [év] (int)
+    - leghosszab megszakítás nélküli munkaviszony [év] (int)
+- Beolvasás után lista kiírása
+  - egy sorba a személy neve és a nyugdíja
+    - nyugdíjszámítás: átlagfizetés 60%-a, ha az < 80000,
+    - egyébként 50%
+    - legalább 15 éves megszakítás nélküli munkaviszony esetén 75%
+
+
+
