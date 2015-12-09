@@ -20,27 +20,29 @@ int leghosszab;
 
 int hanyember() {
 	int e = 0;
+	string s;
 	while (e < MINDARAB || e > MAXDARAB) {
 		cout << "Kérem az emberek számát (max 10): ";
-		cin >> e;
+		cin >> e; getline(cin, s);
 	}
 	return e;
 }
 
 void beolvasEmber(int i) {
 	int db = 1;
+	string s;
 	while (db <= i) {
 		Ember e = Ember();
-		cout << "Név: ";
-		cin >> nev;
+		cout << db << ". Név: ";
+		getline(cin,nev);
 		cout << "Azonosító: ";
-		cin >> azonosito;
+		cin>>azonosito; getline(cin, s);
 		cout << "Átlagfizetés: ";
-		cin >> atlagfizu;
+		cin >> atlagfizu; getline(cin, s);
 		cout << "Munkaviszony (év): ";
-		cin >> munkaviszony;
+		cin >> munkaviszony; getline(cin, s);
 		cout << "Leghosszab munkaviszony (év): ";
-		cin >> leghosszab;
+		cin >> leghosszab;getline(cin, s);
 		
 		e.setNev(nev);
 		e.setAzonosito(azonosito);
