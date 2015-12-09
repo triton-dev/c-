@@ -5,7 +5,7 @@ Feladat:
   - max. 10 személy,
   - többet ne engedjen,
   - személyek adatai:
-    - neve
+    - neve (string)
     - azonosító szám (int)
     - átlagos havi fizetése (real)
     - teljes munkaviszony időtartama [év] (int)
