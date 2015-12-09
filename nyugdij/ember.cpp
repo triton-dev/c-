@@ -71,6 +71,8 @@ void Ember::print() {
 }
 
 void Ember::printFejlec() {
+	cout << endl;
+	cout << "************************************************" << endl;
     cout << "azonosító" << "\t" << "név" << "\t" << "nyugdíj" << endl;
 }
 
