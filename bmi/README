@@ -1,0 +1,35 @@
+BMI kiszámítása
+
+- módosított képlettel (a javaslat szerint)
+(Az eredeti kg/m2 a magasakat kövérebbenek, az alacsonyakat
+ soványabbank mutatja.)
+
+      1,3×testtömeg[kg]
+BMI = -----------------
+                 2,5 
+      magasság[m]
+
+
+Kiértékelés:
+
+BMI 
+<16           súlyos soványság
+16 - 16,99    mérsékelt soványság
+17 - 18,49    enyhe soványság
+18,5 - 24,99  normális testsúly
+25 - 29,99    túlsúlyos
+30 - 34,99    1. fokú elhízás
+35 - 39,99    2. fokú elhízás
+>= 40         3. fokú (súlyos) elhízás
+
+1. Magasság és testtömeg ismeretében BMI értéke és szövege.
+2. Magassághoz normális testtömeg tól-ig.
+3. Tömeghez magasság tól-ig.
+
+Bővítés (később)
+- a számított eredményeket írja fájlba
+  bmi.txt (név \t dátum \t módosítottBMI \t eredetiBMI)
+
+
+
+
