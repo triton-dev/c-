@@ -24,8 +24,8 @@ void start() {
 	
 	b.print();
     
-    BMI::magassaghozTomeg(185);
-    BMI::tomeghezMagassag(83);
+    BMI::magassaghozTomeg(190);
+    BMI::tomeghezMagassag(90);
 }
 
 void stop() {
