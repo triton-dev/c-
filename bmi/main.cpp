@@ -2,12 +2,12 @@
 
 #include<iostream>
 #include<string>
+#include<locale>
 
 using namespace std;
 
-int main() {
-	
-	string nev;
+void start() {
+    string nev;
 	nev = "gyuri";
 	string datum;
 	datum ="20151213";
@@ -23,8 +23,25 @@ int main() {
 	b.setTomeg(tomeg);
 	
 	b.print();
+    
+    BMI::magassaghozTomeg(185);
+    BMI::tomeghezMagassag(83);
+}
+
+void stop() {
+    string a;
+    cout << "Nyomjon [Enter]-t...";
+    getline(cin, a);
+    system("clear");
+}
+
+int main() {
 	
+    setlocale(LC_ALL,"");
+    
+    start();	
 	
-	
+    stop();
+    
 return 0;
 }
