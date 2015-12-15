@@ -8,13 +8,19 @@ using namespace std;
 
 void start() {
     string nev;
-	nev = "gyuri";
+    cout << "Kérem a nevet: ";
+    getline(cin, nev);
 	string datum;
-	datum ="20151213";
+	cout << "Kérem a dátumot: ";
+	getline(cin, datum);
 	double magassag;
-	magassag = 195;
+	cout << "Kérem a magasságot egész centiméterben: ";
+	cin >> magassag;
 	double tomeg;
-	tomeg = 140;
+	cout << "Kérem a tömeget egész kilogramban: ";
+	cin >> tomeg;
+	string s;
+	getline(cin, s);
 	
 	BMI b = BMI();
 	b.setNev(nev);
@@ -24,9 +30,11 @@ void start() {
 	
 	b.print();
     
-    BMI::magassaghozTomeg(190);
-    BMI::tomeghezMagassag(100);
+    BMI::magassaghozTomeg(magassag);
+    BMI::tomeghezMagassag(tomeg);
+    
 }
+
 
 void stop() {
     string a;
