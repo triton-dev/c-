@@ -4,6 +4,7 @@ OUT = -o bmicalc.out
 
 bmicalc.out: bmi.o main.o
 	$(CC) $(CFLAGS) *.o $(OUT)
+	# rm *.o -> [make clean]
 	./bmicalc.out
 
 bmi.o: bmi.h bmi.cpp
@@ -12,6 +13,7 @@ bmi.o: bmi.h bmi.cpp
 main.o: bmi.h main.cpp
 	$(CC) $(CFLAGS) -c main.cpp
 
+.PHONY: clean
 clean:
 	rm *.o
 	
