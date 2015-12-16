@@ -5,31 +5,76 @@
 #include<string>
 #include<locale>
 
+
 using namespace std;
 
 void start() {
-    string nev;
+	
+	const int I_DATUM = 10000101;
+	const string S_DATUM = "10000101"; 
+	double magassag;
+	string input;
+	double tomeg;
+	string nev;
+	string datum;
+    bool ok;
+    
     cout << "Kérem a nevet: ";
     getline(cin, nev);
-	string datum;
+	
 	cout << "Kérem a dátumot: ";
 	getline(cin, datum);
-	int dt = stoi(datum);
-	Datum d = Datum(dt);
 	
-	if(!d.joDatum(d)) {
-		cout << "Rossz a dátum: "<<datum<< " helyettesítve: 19000101-gyel "<<endl;
-		datum = "19000101";
+	int dt;
+	try {
+		dt = stoi(datum);
 	}
-	double magassag;
-	string a;
-	cout << "Kérem a magasságot egész centiméterben: ";
-	getline(cin, a); //cin >> magassag;
-	magassag = stol(a);
-	double tomeg;
-	cout << "Kérem a tömeget egész kilogramban: ";
-  getline(cin, a); //	cin >> tomeg;
-	tomeg = stol(a);
+	catch (...) {
+		cout << "Ez nem dátum! Helyettesítve ezzel: "<< S_DATUM  << endl;
+		dt = I_DATUM;
+		datum = S_DATUM;
+	}
+	
+	Datum d = Datum(dt);	
+	if(!d.joDatum(d)) {
+		cout << "Rossz a dátum: "<< datum << " helyettesítve ezzel: "<< S_DATUM << endl;
+		datum = S_DATUM;
+	}
+	
+	
+	do {
+		ok = true;
+		cout << "Kérem a magasságot egész centiméterben: ";
+		getline(cin, input); //cin >> magassag;
+		try {
+			magassag = stol(input);
+		}
+		catch (...) {
+			cout << "Ez nem szám volt!" << endl;
+			ok = false;
+		}
+		if (ok && (magassag <= 0 || magassag >= 400)) {
+			cout << "Határértéken kívüli magasság! [0-400 cm]" << endl;
+			ok = false;
+		}
+	} while (!ok);
+	
+	do {
+		ok = true;
+		cout << "Kérem a tömeget egész kilogramban: ";
+		getline(cin, input); //	cin >> tomeg;
+		try {
+			tomeg = stol(input);
+		}
+		catch (...) {
+			cout << "Ez nem szám volt!" << endl;
+			ok = false;
+		}
+		if (ok && (tomeg <=0 || tomeg > 600)) {
+			cout << "Határértéken kívüli testtömeg! [0-600 kg]" << endl;
+			ok = false;
+		}
+	} while (!ok);
 
 	// buffer alaphelyzetre:
 	// getline(cin, a);
@@ -48,20 +93,25 @@ void start() {
 }
 
 
-void stop() {
-    string a;
-    cout << "Nyomjon [Enter]-t...";
-    getline(cin, a);
-    system("clear");
+bool ujra() {
+    string input;
+    cout << "Új számítás? [i/n]";
+    getline(cin,input);
+    if (input[0] == 'I' || input[0] == 'i') {return true;}
+    return false;
+    
 }
 
 int main() {
 	
     setlocale(LC_ALL,"");
     
-    start();	
+    do {
+		start();	
+	} while(ujra());
 	
-    stop();
+    cout << endl;
+    
     
 return 0;
 }

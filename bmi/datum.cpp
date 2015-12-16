@@ -56,13 +56,13 @@ int Datum::getIntNap() {
 }
 
 bool Datum::joDatum(Datum ehn) {
-	bool szokoev = ((getIntEv() % 4 == 0) &&
-	                (getIntEv() % 100 != 0) ||
-	                (getIntEv() % 400 == 0));
-	int h = getIntHonap();
+	bool szokoev = ((ehn.getIntEv() % 4 == 0) &&
+	                (ehn.getIntEv() % 100 != 0) ||
+	                (ehn.getIntEv() % 400 == 0));
+	int h = ehn.getIntHonap();
 	//          0 j  f  m  á  m  j  j  a  s  o  n  d
 	int hn[] = {0,31,28,31,30,31,30,31,31,30,31,30,31};
-	int n = getIntNap();
+	int n = ehn.getIntNap();
 	// Nap<1?
 	if(n < 1) {
 		return false;

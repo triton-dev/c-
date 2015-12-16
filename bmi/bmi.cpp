@@ -66,6 +66,7 @@ string BMI::getSzoveges(double bmi) {
 
 void BMI::print() {
 	cout << getNev() << "\t";
+	cout << getTomeg() << "\t";
 	cout << getDatum() << "\t";
 	cout << getModBmi(getMagassag(), getTomeg()) << "\t";
 	cout << getSzoveges(getModBmi(getMagassag(), getTomeg())) << "\t";

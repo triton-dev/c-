@@ -18,8 +18,9 @@ class Datum
 		int getIntEv();
 		int getIntHonap();
 		int getIntNap();
-		bool joDatum(Datum d);
+		
 		std::string toString();
+		static bool joDatum(Datum);
 	protected:
 	private:
 		int ev;
