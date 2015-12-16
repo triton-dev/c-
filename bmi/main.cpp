@@ -14,13 +14,17 @@ void start() {
 	cout << "Kérem a dátumot: ";
 	getline(cin, datum);
 	double magassag;
+	string a;
 	cout << "Kérem a magasságot egész centiméterben: ";
-	cin >> magassag;
+	getline(cin, a); //cin >> magassag;
+	magassag = stol(a);
 	double tomeg;
 	cout << "Kérem a tömeget egész kilogramban: ";
-	cin >> tomeg;
-	string s;
-	getline(cin, s);
+  getline(cin, a); //	cin >> tomeg;
+	tomeg = stol(a);
+
+	// buffer alaphelyzetre:
+	// getline(cin, a);
 	
 	BMI b = BMI();
 	b.setNev(nev);

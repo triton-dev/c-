@@ -59,7 +59,7 @@ string BMI::getSzoveges(double bmi) {
     if(bmi > 16.99 && bmi <= 18.49) {return "\"enyhe soványság\"";}
     if(bmi > 18.49 && bmi <= 24.99) {return "\"normális testsúly\"";}
     if(bmi > 25 && bmi <= 29.99) {return "\"túlsúlyos\"";}
-    if(bmi > 30 && bmi <= 34,99) {return "\"1. fokú elhízás\"";}
+    if(bmi > 30 && bmi <= 34.99) {return "\"1. fokú elhízás\"";}
     if(bmi > 35 && bmi <= 39.99) {return "\"2. fokú elhízás\"";}
     if(bmi >= 40) {return "\"3. fokú (súlyos) elhízás\"";}
 };
