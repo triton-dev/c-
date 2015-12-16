@@ -22,7 +22,7 @@ void start() {
     cout << "Kérem a nevet: ";
     getline(cin, nev);
 	
-	cout << "Kérem a dátumot: ";
+	cout << "Kérem a dátumot [ééééhhnn] formátumban: ";
 	getline(cin, datum);
 	
 	int dt;
