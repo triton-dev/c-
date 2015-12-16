@@ -1,4 +1,5 @@
 #include"bmi.h"
+#include"datum.h"
 
 #include<iostream>
 #include<string>
@@ -13,6 +14,13 @@ void start() {
 	string datum;
 	cout << "Kérem a dátumot: ";
 	getline(cin, datum);
+	int dt = stoi(datum);
+	Datum d = Datum(dt);
+	
+	if(!d.joDatum(d)) {
+		cout << "Rossz a dátum: "<<datum<< " helyettesítve: 19000101-gyel "<<endl;
+		datum = "19000101";
+	}
 	double magassag;
 	string a;
 	cout << "Kérem a magasságot egész centiméterben: ";
